@@ -7,7 +7,7 @@ def MNW(valuation_matrix):
 	V = deepcopy(valuation_matrix)
 	num_agents, num_items = V.shape
 	
-	model = Model(sense=MAXIMIZE, solver_name=CBC)
+	model = Model(solver_name=CBC)
 	
 	"""
 	Constraints:
