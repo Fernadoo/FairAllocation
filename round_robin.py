@@ -1,7 +1,5 @@
 import numpy as np
 from copy import deepcopy
-import sys
-import argparse
 
 def roundRobin(valuation_matrix):
 	"""
@@ -9,10 +7,11 @@ def roundRobin(valuation_matrix):
 	"""
 	V = deepcopy(valuation_matrix)
 	num_agents, num_items = V.shape
-	item_list = np.ones(num_items)
+
 	allocation = dict()
 	for agent in range(num_agents):
 		allocation[agent] = []
+	
 	P = np.zeros(shape=(num_agents, num_items))
 
 	agent = 0

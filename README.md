@@ -8,6 +8,7 @@
 $ python eval.py -h
 usage: eval.py [-h] [--alg {roundRobin,envyGraph,MNW,CSP1,CSPx}]
                [--num_agents NUM_AGENTS] [--num_items NUM_ITEMS] [--round RD]
+               [--seed SEED]
 
 Allocating indivisible items.
 
@@ -20,6 +21,7 @@ optional arguments:
   --num_items NUM_ITEMS
                         Specify the number of items
   --round RD            Specify the degree of rounding
+  --seed SEED           Specify the seed
 ```
 
 

@@ -3,6 +3,7 @@ import sys
 import argparse
 
 from round_robin import roundRobin
+from envy_graph import envyGraph
 
 
 def get_args():
@@ -10,16 +11,19 @@ def get_args():
 
 	parser.add_argument('--alg', dest='algorithm', type=str, default='roundRobin', choices=['roundRobin', 'envyGraph', 'MNW', 'CSP1', 'CSPx'],
 						help='Select the allocation algorithm')
-	parser.add_argument('--num_agents', dest='num_agents', type=int, default='3',
+	parser.add_argument('--num_agents', dest='num_agents', type=int, default=3,
 						help='Specify the number of agents')
-	parser.add_argument('--num_items', dest='num_items', type=int, default='7',
+	parser.add_argument('--num_items', dest='num_items', type=int, default=7,
 						help='Specify the number of items')
-	parser.add_argument('--round', dest='rd', type=int, default='2',
+	parser.add_argument('--round', dest='rd', type=int, default=2,
 						help='Specify the degree of rounding')
+	parser.add_argument('--seed', dest='seed', type=int, default=0,
+						help='Specify the seed')
 
 	return parser.parse_args()
 
-def init_instance(num_agents, num_items, rd, visual=False):
+def init_instance(num_agents, num_items, rd, seed, visual=False):
+	np.random.seed(seed)
 	valuation_matrix = np.round(np.random.rand(num_agents, num_items), rd) * (10 ** rd)
 
 	if visual:
@@ -32,8 +36,8 @@ def get_allocation(valuation_matrix, alg, visual=False):
 	algorithm = None
 	if alg == 'roundRobin':
 		algorithm = roundRobin
-	# # elif alg == 'envyGraph':
-	# # 	algorithm = envyGraph
+	elif alg == 'envyGraph':
+		algorithm = envyGraph
 	# # elif alg == 'MNW':
 	# # 	algorithm = MNW
 	# # elif alg == 'CSP1':
@@ -54,6 +58,6 @@ def get_allocation(valuation_matrix, alg, visual=False):
 
 if __name__ == '__main__':
 	args = get_args()
-	V = init_instance(args.num_agents, args.num_items, args.rd, visual=True)
-	P, envy = get_allocation(V, args.algorithm, visual=True)
+	V = init_instance(args.num_agents, args.num_items, args.rd, args.seed, visual=True)
+	allocation, envy = get_allocation(V, args.algorithm, visual=True)
 
