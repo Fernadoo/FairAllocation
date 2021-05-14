@@ -26,12 +26,12 @@ optional arguments:
 
 ### Implementation so far:
 
-| Algorithm  | Complexity |                    Reference                     |   Support    |
-| :--------: | :--------: | :----------------------------------------------: | :----------: |
-| roundRobin | Polynomial |    https://dl.acm.org/doi/pdf/10.1145/3355902    | $\checkmark$ |
-| envyGraph  | Polynomial | https://dl.acm.org/doi/pdf/10.1145/988772.988792 |              |
-|    MNW     |  NP-hard   |    https://dl.acm.org/doi/pdf/10.1145/3355902    |              |
-|    CSP     |  NP-hard   |                                                  |              |
+| Algorithm  | Complexity |                    Reference                     | Support |
+| :--------: | :--------: | :----------------------------------------------: | :-----: |
+| roundRobin | Polynomial |    https://dl.acm.org/doi/pdf/10.1145/3355902    |    Y    |
+| envyGraph  | Polynomial | https://dl.acm.org/doi/pdf/10.1145/988772.988792 |         |
+|    MNW     |  NP-hard   |    https://dl.acm.org/doi/pdf/10.1145/3355902    |         |
+|    CSP     |  NP-hard   |                                                  |         |
 
 
 
