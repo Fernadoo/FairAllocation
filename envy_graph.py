@@ -69,14 +69,21 @@ def envyGraph(valuation_matrix):
 	for item in range(num_items):
 		# 0. construct the envy graph
 		envy_graph = construct_envy_graph(V, P) # represented as an adjacent matrix
+		
 		# 1. get a source node
 		src_agent = get_source_node(envy_graph)
+		
 		# 2. allocate one item and update the envy graph
 		P[src_agent, item] = 1
 		envy_graph = construct_envy_graph(V, P)
+		# print(f'--- Round {item} ---')
+		# print(P)
+		# print(envy_graph)
+		
 		# 3. find a cycle and swap the bundles along the reversed direction
-		cycle = get_cycle(envy_graph) # a list of agent-indices in the cycle 
+		cycle = get_cycle(envy_graph) # a list of agent-indices in the cycle
 		if cycle:
+			# print(cycle)
 			swap(P, cycle)
 
 	allocation = dict()

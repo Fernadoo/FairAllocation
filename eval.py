@@ -4,6 +4,7 @@ import argparse
 
 from round_robin import roundRobin
 from envy_graph import envyGraph
+from mnw import MNW
 
 
 def get_args():
@@ -38,8 +39,8 @@ def get_allocation(valuation_matrix, alg, visual=False):
 		algorithm = roundRobin
 	elif alg == 'envyGraph':
 		algorithm = envyGraph
-	# # elif alg == 'MNW':
-	# # 	algorithm = MNW
+	elif alg == 'MNW':
+		algorithm = MNW
 	# # elif alg == 'CSP1':
 	# # 	algorithm = CSP1
 	# # elif alg == 'CSPx':

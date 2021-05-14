@@ -31,7 +31,7 @@ optional arguments:
 | Algorithm  | Complexity |                    Reference                     | Support |
 | :--------: | :--------: | :----------------------------------------------: | :-----: |
 | roundRobin | Polynomial |    https://dl.acm.org/doi/pdf/10.1145/3355902    |    Y    |
-| envyGraph  | Polynomial | https://dl.acm.org/doi/pdf/10.1145/988772.988792 |         |
+| envyGraph  | Polynomial | https://dl.acm.org/doi/pdf/10.1145/988772.988792 |    Y    |
 |    MNW     |  NP-hard   |    https://dl.acm.org/doi/pdf/10.1145/3355902    |         |
 |    CSP     |  NP-hard   |                                                  |         |
 
