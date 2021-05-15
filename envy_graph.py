@@ -1,6 +1,9 @@
 import numpy as np
 from copy import deepcopy
 
+"""
+Helper functions for graph operators
+"""
 def construct_envy_graph(V, P):
 	"""
 	Agent i envies agent j, i.e. V_i(P_j) > V_i(P_i)
@@ -23,10 +26,10 @@ def get_source_node(envy_graph):
 def get_cycle(envy_graph):
 	"""
 	Suppose cycle looks as follows
-		--> 1 --> 4
-		|	      |
-		|	      |
-		5 <-- 6 <--
+		--> *1 --> 4
+		|	       |
+		|	       |
+		5 <-- 6 <---
 	then cycle = [1, 4, 6, 5]
 	"""
 	def DFS(curr, pred, G):
@@ -57,6 +60,9 @@ def swap(P, cycle):
 		else:
 			P[cycle[i]] = deepcopy(P[cycle[i+1]])
 
+"""
+Allocation algorithms based on envy graph
+"""
 def envyGraph(valuation_matrix):
 	"""
 	V_ij = the value agent i holds towards item j
@@ -96,3 +102,9 @@ def envyGraph(valuation_matrix):
 			envy_matrix[agent, opponent] = np.sum(valuation_matrix[agent] * P[opponent])
 
 	return allocation, envy_matrix
+
+def generalizedEnvyGraph():
+	"""
+	Genralize envyGraph to allocate indivisible chores
+	"""
+	pass

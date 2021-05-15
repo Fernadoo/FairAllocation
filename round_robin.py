@@ -30,4 +30,10 @@ def roundRobin(valuation_matrix):
 
 	return allocation, envy_matrix
 
+def doubleRoundRobin(valuation_matrix):
+	"""
+	Extended for indivisible chore division
+	"""
+	pass
+
 

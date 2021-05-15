@@ -2,8 +2,8 @@ import numpy as np
 import sys
 import argparse
 
-from round_robin import roundRobin
-from envy_graph import envyGraph
+from round_robin import roundRobin, doubleRoundRobin
+from envy_graph import envyGraph, generalizedEnvyGraph
 from max_welfare import MUtilW, MNW_opt, MNW_local
 
 
@@ -43,13 +43,13 @@ def get_allocation(valuation_matrix, alg, visual=False):
 	elif alg == 'MUtilW':
 		algorithm = MUtilW
 	elif alg == 'MNW_opt':
-		algorithm = MUtilW
-	elif alg == 'MNW_local':
-		algorithm = MUtilW
-	# # elif alg == 'CSP1':
-	# # 	algorithm = CSP1
-	# # elif alg == 'CSPx':
-	# # 	algorithm = CSPx
+		algorithm = MNW_opt
+	# elif alg == 'MNW_local':
+	# 	algorithm = MUtilW
+	# elif alg == 'CSP1':
+	# 	algorithm = CSP1
+	# elif alg == 'CSPx':
+	# 	algorithm = CSPx
 
 	allocation, envy_matrix = algorithm(valuation_matrix)
 

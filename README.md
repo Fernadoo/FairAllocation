@@ -6,7 +6,8 @@
 
 ```shell
 $ python eval.py -h
-usage: eval.py [-h] [--alg {roundRobin,envyGraph,MNW,CSP1,CSPx}]
+usage: eval.py [-h]
+               [--alg {roundRobin,envyGraph,MUtilW,MNW_opt,MNW_local,CSP1,CSPx}]
                [--num_agents NUM_AGENTS] [--num_items NUM_ITEMS] [--round RD]
                [--seed SEED]
 
@@ -14,7 +15,7 @@ Allocating indivisible items.
 
 optional arguments:
   -h, --help            show this help message and exit
-  --alg {roundRobin,envyGraph,MNW,CSP1,CSPx}
+  --alg {roundRobin,envyGraph,MUtilW,MNW_opt,MNW_local,CSP1,CSPx}
                         Select the allocation algorithm
   --num_agents NUM_AGENTS
                         Specify the number of agents
@@ -28,14 +29,15 @@ optional arguments:
 
 ### Implementation so far:
 
-| Algorithm  |  Cplx   | EF1  | PO   |                          Reference                           | Support |
-| :--------: | :-----: | :--: | ---- | :----------------------------------------------------------: | :-----: |
-| roundRobin |  Poly   |  Y   | N    |          https://dl.acm.org/doi/pdf/10.1145/3355902          |    Y    |
-| envyGraph  |  Poly   |  Y   | N    |       https://dl.acm.org/doi/pdf/10.1145/988772.988792       |    Y    |
-|   MUtilW   |  Poly   |  N   | Y    |                              /                               |    Y    |
-|  MNW_opt   | NP-hard |  Y   | Y    |          https://dl.acm.org/doi/pdf/10.1145/3355902          |         |
-| MNW_local  |   DK    |  DK  | DK   | http://www.lifl.fr/SMAC/publications/pdf/paams2009-realistic.pdf |         |
-|    CSP     | NP-hard |  Y   | Y    |                                                              |         |
+|    Algorithm     |  Cplx   | EF1  | PO   | EFx(any) | Allow_neg |                          Reference                           | Support |
+| :--------------: | :-----: | :--: | ---- | -------- | --------- | :----------------------------------------------------------: | :-----: |
+|    roundRobin    |  Poly   |  Y   | N    | N        |           |          https://dl.acm.org/doi/pdf/10.1145/3355902          |    Y    |
+| doubleRoundRobin |         |      |      |          | Y         |       https://www.ijcai.org/proceedings/2019/0008.pdf        |         |
+|    envyGraph     |  Poly   |  Y   | N    | N        |           |       https://dl.acm.org/doi/pdf/10.1145/988772.988792       |    Y    |
+|      MUtilW      |  Poly   |  N   | Y    | N        |           |                              /                               |    Y    |
+|     MNW_opt      | NP-hard |  Y   | Y    | N        |           |          https://dl.acm.org/doi/pdf/10.1145/3355902          |    Y    |
+|    MNW_local     |   DK    |  DK  | DK   | N        |           | http://www.lifl.fr/SMAC/publications/pdf/paams2009-realistic.pdf |         |
+|       CSP        | NP-hard |  Y   | Y    | Y        |           |                                                              |         |
 
 
 
