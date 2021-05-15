@@ -3,7 +3,7 @@ import sys
 import argparse
 
 from round_robin import roundRobin, doubleRoundRobin
-from envy_graph import envyGraph, generalizedEnvyGraph
+from envy_graph import envyGraph, genEnvyGraph
 from max_welfare import MUtilW, MNW_opt, MNW_local
 
 
@@ -44,8 +44,8 @@ def get_allocation(valuation_matrix, alg, visual=False):
 		algorithm = MUtilW
 	elif alg == 'MNW_opt':
 		algorithm = MNW_opt
-	# elif alg == 'MNW_local':
-	# 	algorithm = MUtilW
+	elif alg == 'MNW_local':
+		algorithm = MNW_local
 	# elif alg == 'CSP1':
 	# 	algorithm = CSP1
 	# elif alg == 'CSPx':

@@ -23,7 +23,7 @@ def get_source_node(envy_graph):
 		if envy_graph[:,agent].tolist() == [0] * num_agents:
 			return agent
 
-def get_cycle(envy_graph):
+def get_cycle(envy_graph): #TODO seems correct
 	"""
 	Suppose cycle looks as follows
 		--> *1 --> 4
@@ -103,7 +103,7 @@ def envyGraph(valuation_matrix):
 
 	return allocation, envy_matrix
 
-def generalizedEnvyGraph():
+def genEnvyGraph():
 	"""
 	Genralize envyGraph to allocate indivisible chores
 	"""
