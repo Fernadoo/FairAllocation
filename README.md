@@ -28,13 +28,14 @@ optional arguments:
 
 ### Implementation so far:
 
-| Algorithm  | Complexity  |                          Reference                           | Support |
-| :--------: | :---------: | :----------------------------------------------------------: | :-----: |
-| roundRobin | Polynomial  |          https://dl.acm.org/doi/pdf/10.1145/3355902          |    Y    |
-| envyGraph  | Polynomial  |       https://dl.acm.org/doi/pdf/10.1145/988772.988792       |    Y    |
-|  MNW_opt   |   NP-hard   |          https://dl.acm.org/doi/pdf/10.1145/3355902          |         |
-| MNW_local  | Polynomial? | http://www.lifl.fr/SMAC/publications/pdf/paams2009-realistic.pdf |         |
-|    CSP     |   NP-hard   |                                                              |         |
+| Algorithm  |  Cplx   | EF1  | PO   |                          Reference                           | Support |
+| :--------: | :-----: | :--: | ---- | :----------------------------------------------------------: | :-----: |
+| roundRobin |  Poly   |  Y   | N    |          https://dl.acm.org/doi/pdf/10.1145/3355902          |    Y    |
+| envyGraph  |  Poly   |  Y   | N    |       https://dl.acm.org/doi/pdf/10.1145/988772.988792       |    Y    |
+|   MUtilW   |  Poly   |  N   | Y    |                              /                               |    Y    |
+|  MNW_opt   | NP-hard |  Y   | Y    |          https://dl.acm.org/doi/pdf/10.1145/3355902          |         |
+| MNW_local  |   DK    |  DK  | DK   | http://www.lifl.fr/SMAC/publications/pdf/paams2009-realistic.pdf |         |
+|    CSP     | NP-hard |  Y   | Y    |                                                              |         |
 
 
 

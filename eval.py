@@ -4,13 +4,14 @@ import argparse
 
 from round_robin import roundRobin
 from envy_graph import envyGraph
-from mnw import MNW
+from max_welfare import MUtilW, MNW_opt, MNW_local
 
 
 def get_args():
 	parser = argparse.ArgumentParser(description='Allocating indivisible items.')
 
-	parser.add_argument('--alg', dest='algorithm', type=str, default='roundRobin', choices=['roundRobin', 'envyGraph', 'MNW', 'CSP1', 'CSPx'],
+	parser.add_argument('--alg', dest='algorithm', type=str, default='roundRobin',
+						choices=['roundRobin', 'envyGraph', 'MUtilW', 'MNW_opt', 'MNW_local', 'CSP1', 'CSPx'],
 						help='Select the allocation algorithm')
 	parser.add_argument('--num_agents', dest='num_agents', type=int, default=3,
 						help='Specify the number of agents')
@@ -39,8 +40,12 @@ def get_allocation(valuation_matrix, alg, visual=False):
 		algorithm = roundRobin
 	elif alg == 'envyGraph':
 		algorithm = envyGraph
-	elif alg == 'MNW':
-		algorithm = MNW
+	elif alg == 'MUtilW':
+		algorithm = MUtilW
+	elif alg == 'MNW_opt':
+		algorithm = MUtilW
+	elif alg == 'MNW_local':
+		algorithm = MUtilW
 	# # elif alg == 'CSP1':
 	# # 	algorithm = CSP1
 	# # elif alg == 'CSPx':

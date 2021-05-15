@@ -3,7 +3,7 @@ from copy import deepcopy
 from mip import *
 
 
-def MNW(valuation_matrix):
+def MUtilW(valuation_matrix):
 	V = deepcopy(valuation_matrix)
 	num_agents, num_items = V.shape
 	
@@ -43,5 +43,15 @@ def MNW(valuation_matrix):
 	for agent in range(num_agents):
 		for opponent in range(num_agents):
 			envy_matrix[agent, opponent] = np.sum(valuation_matrix[agent] * P[opponent])
+
+	return allocation, envy_matrix
+
+
+def MNW_opt(valuation_matrix):
+
+	return allocation, envy_matrix
+
+
+def MNW_local(valuation_matrix):
 
 	return allocation, envy_matrix
