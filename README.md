@@ -31,13 +31,13 @@ optional arguments:
 
 |    Algorithm     |  Comp   | EF1  | PO   | EFx(any) | Allow_neg |                          Reference                           | Support |
 | :--------------: | :-----: | :--: | ---- | :------: | :-------: | :----------------------------------------------------------: | :-----: |
-|    roundRobin    |  Poly   |  Y   | N    |    N     |           |          https://dl.acm.org/doi/pdf/10.1145/3355902          |    Y    |
-| doubleRoundRobin |         |      |      |          |     Y     |       https://www.ijcai.org/proceedings/2019/0008.pdf        |         |
-|    envyGraph     |  Poly   |  Y   | N    |    N     |           |       https://dl.acm.org/doi/pdf/10.1145/988772.988792       |    Y    |
-|   genEnvyGraph   |         |      |      |          |     Y     |       https://www.ijcai.org/proceedings/2019/0008.pdf        |         |
+|    roundRobin    |  Poly   |  Y   | N    |    N     |           | [The Unreasonable Fairness of Maximum Nash Welfare](https://dl.acm.org/doi/pdf/10.1145/3355902) |    Y    |
+| doubleRoundRobin |         |      |      |          |     Y     | [Fair Allocation of Indivisible Goods and Chores](https://www.ijcai.org/proceedings/2019/0008.pdf) |         |
+|    envyGraph     |  Poly   |  Y   | N    |    N     |           | [On Approximately Fair Allocations of Indivisible Goods](https://dl.acm.org/doi/pdf/10.1145/988772.988792) |    Y    |
+|   genEnvyGraph   |         |      |      |          |     Y     | [Fair Allocation of Indivisible Goods and Chores](https://www.ijcai.org/proceedings/2019/0008.pdf) |         |
 |      MUtilW      |  Poly   |  N   | Y    |    N     |           |                              /                               |    Y    |
-|     MNW_opt      | NP-hard |  Y   | Y    |    N     |           |          https://dl.acm.org/doi/pdf/10.1145/3355902          |    Y    |
-|    MNW_local     |   DK    |  DK  | DK   |    N     |           | http://www.lifl.fr/SMAC/publications/pdf/paams2009-realistic.pdf |    Y    |
+|     MNW_opt      | NP-hard |  Y   | Y    |    N     |           | [The Unreasonable Fairness of Maximum Nash Welfare](https://dl.acm.org/doi/pdf/10.1145/3355902) |    Y    |
+|    MNW_local     |   DK    |  DK  | DK   |    N     |           | [A Realistic Approach to Solve the Nash Welfare](http://www.lifl.fr/SMAC/publications/pdf/paams2009-realistic.pdf) |    Y    |
 |       CSP        | NP-hard |  Y   | Y    |    Y     |           |                                                              |         |
 
 
