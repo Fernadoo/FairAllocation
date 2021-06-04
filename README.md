@@ -42,7 +42,7 @@ optional arguments:
 
 
 
-### As solving CSPs (*<u>new!</u>*)[*<u>onging...</u>*]:
+<!-- ### As solving CSPs (*<u>new!</u>*)[*<u>onging...</u>*]:
 
 #### Formulation:
 
@@ -54,7 +54,7 @@ For naive DFS, # of possible solutions = m^n
 
 #### Pruning:
 
-* Rule 1: In any intermediate round, if such a situation exists, for a source agent, this agent (relaxed-ly) envies some other agent even if he gets all the rest goods, then the partial allocation is not feasible.
+* Rule 1: In any intermediate round, if such a situation exists, for a source agent, this agent (relaxed-ly) envies some other agent even if he gets all the rest goods, then the partial allocation is not feasible. -->
 
  
 
