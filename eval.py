@@ -2,9 +2,9 @@ import numpy as np
 import sys
 import argparse
 
-from round_robin import roundRobin, doubleRoundRobin
-from envy_graph import envyGraph, genEnvyGraph
-from max_welfare import MUtilW, MNW_opt, MNW_local
+from exact.round_robin import roundRobin, doubleRoundRobin
+from exact.envy_graph import envyGraph, genEnvyGraph
+from exact.max_welfare import MUtilW, MNW_opt, MNW_local
 
 
 def get_args():

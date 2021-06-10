@@ -25,7 +25,9 @@ optional arguments:
   --seed SEED           Specify the seed
 ```
 
+- Example:
 
+`python eval.py --alg roundRobin --num_agents 4 --num_items 50 --round 2 --seed 7`
 
 ### Implementation so far:
 
