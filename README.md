@@ -25,7 +25,9 @@ optional arguments:
   --seed SEED           Specify the seed
 ```
 
+- Example:
 
+`python eval.py --alg roundRobin --num_agents 4 --num_items 50 --round 2 --seed 7`
 
 ### Implementation so far:
 
@@ -39,6 +41,7 @@ optional arguments:
 |     MNW_opt      | NP-hard |  Y   | Y    |    N     |           | [The Unreasonable Fairness of Maximum Nash Welfare](https://dl.acm.org/doi/pdf/10.1145/3355902) |    Y    |
 |    MNW_local     |   DK    |  DK  | DK   |    N     |           | [A Realistic Approach to Solve the Nash Welfare](http://www.lifl.fr/SMAC/publications/pdf/paams2009-realistic.pdf) |    Y    |
 |       CSP        | NP-hard |  Y   | Y    |    Y     |           |                                                              |         |
+|     deepNet      | Linear  |  Y   | DK   |          |           |                                                              |         |
 
 
 
